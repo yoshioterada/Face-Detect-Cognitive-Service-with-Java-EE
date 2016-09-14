@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      >
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputScript id="jscript" library="javascript" name="screen-operation.js"/>
+
+    </h:head>
+    <h:body>
+        <p:graphicImage library="images" name="cognitive.png" width="75%" height="75%"/>
+        
+        <h:form id="form" enctype="multipart/form-data">
+            <br/>
+            <p:outputLabel value="Face API and Emotional API Sample Application with Java EE"/>
+            <br/><br/>
+            <p:photoCam update="uploaded" id="photo" widgetVar="pc" listener="#{photoup.sendPhoto}" photoHeight="600" photoWidth="800"/><br/>
+            <p:commandButton  id="button" type="button" value="Capture" onclick="PF('pc').capture()" icon="fa fa-camera" update="uploaded" oncomplete="showData()"/>
+
+            <p:panel id="uploaded" header="アップロードされた画像の解析" style="margin-bottom:20px">
+                <h:panelGrid columns="3" cellpadding="10">
+                    <p:graphicImage value="#{photoup.fileURL}"/>
+
+                    <h:panelGrid columns="2" cellpadding="0">
+                        <p:outputLabel value="年齢(age)"/>
+                        <p:outputLabel value="#{photoup.age}"/>
+
+                        <p:outputLabel value="性別(gender)"/>
+                        <p:outputLabel value="#{photoup.gender}"/>
+
+                        <p:outputLabel value="立腹度(anger)"/>
+                        <p:outputLabel value="#{photoup.anger}%"/>
+
+
+                        <p:outputLabel value="立腹度(anger)"/>
+                        <p:outputLabel value="#{photoup.anger}%"/>
+
+                        <p:outputLabel value="侮辱度(contempt)"/>
+                        <p:outputLabel value="#{photoup.contempt}%"/>
+
+                        <p:outputLabel value="嫌悪度(disgust)"/>
+                        <p:outputLabel value="#{photoup.disgust}%"/>
+
+                        <p:outputLabel value="恐怖度(fear)"/>
+                        <p:outputLabel value="#{photoup.fear}%"/>
+
+                        <p:outputLabel value="幸福度(happiness)"/>
+                        <p:outputLabel value="#{photoup.happiness}%"/>
+
+                        <p:outputLabel value="自然状態度(neutral)"/>
+                        <p:outputLabel value="#{photoup.neutral}%"/>
+
+                        <p:outputLabel value="悲哀度(sadness)"/>
+                        <p:outputLabel value="#{photoup.sadness}%"/>
+
+                        <p:outputLabel value="驚愕度(surprise)"/>
+                        <p:outputLabel value="#{photoup.surprise}%"/>
+                    </h:panelGrid>
+                </h:panelGrid>
+
+            </p:panel>
+        </h:form>
+    </h:body>
+</html>
+
