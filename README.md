@@ -7,9 +7,9 @@ If you woulld like to try to this sample, please modify following?
 [PhotoUploader.java](https://github.com/yoshioterada/Face-Detect-Cognitive-Service-with-Java-EE/blob/master/src/main/java/com/yoshio3/backingBean/PhotoUploader.java)
 
 * __EMOTIONAL_API_SUBSCRIPTION__ 
-: Please get from [Emotion API](https://www.microsoft.com/cognitive-services/en-us/emotion-api)
+: Please get from [Emotion API](https://www.microsoft.com/cognitive-services/en-us/emotion-api?WT.mc_id=java-0000-yoterada)
 * __FACE_API_SUBSCRIPTION__
-: Please get from [Face API](https://www.microsoft.com/cognitive-services/en-us/face-api)
+: Please get from [Face API](https://www.microsoft.com/cognitive-services/en-us/face-api?WT.mc_id=java-0000-yoterada)
 
 You need to get the Subscription ID both Emotion and Face API from the following site. After you got it, please replace the string?
 
